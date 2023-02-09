@@ -1,5 +1,4 @@
 //IIFE Inmediatly Invoke Function Expression
-
 (function()
 {
     let Start = () =>

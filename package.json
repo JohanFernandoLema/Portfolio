@@ -1,0 +1,12 @@
+{
+  "name": "johan-lema-my-portfolio",
+  "version": "0.0.1",
+  "description": "This is my portfolio where you will explore some of the projects that I have created and you will know me a little bit more.",
+  "main": "server.js",
+  "repository": "https://github.com/JohanFernandoLema/Portfolio.git",
+  "author": "Johan Lema",
+  "license": "MIT",
+  "dependencies": {
+    "mime-types": "^2.1.35"
+  }
+}
