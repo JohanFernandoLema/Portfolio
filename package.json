@@ -1,6 +1,6 @@
 {
   "name": "johan-lema-my-portfolio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is my portfolio where you will explore some of the projects that I have created and you will know me a little bit more.",
   "main": "server.js",
   "repository": "https://github.com/JohanFernandoLema/Portfolio.git",
@@ -11,6 +11,9 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "5.3.0-alpha1",
     "cookie-parser": "^1.4.6",
     "debug": "^4.3.4",
     "ejs": "^3.1.8",
