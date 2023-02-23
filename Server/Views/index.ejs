@@ -11,6 +11,60 @@
     <link rel="stylesheet" href="./Content/app.css">
 </head>
 <body>
+        <!--Main Navigation -->
+        <!--.bg-primary: This sets the color to the primary color.
+        .bg-secondary: This sets the color to the secondary color.
+        .bg-success: This sets the color to the success color.
+        .bg-danger: This sets the color to the danger color.
+        .bg-warning: This sets the color to the warning color.
+        .bg-info: This sets the color to the info color.
+        .bg-light: This sets the color to the light color.
+        .bg-dark: This sets the color to the dark color.
+        .bg-white: This sets the color to the white color.
+        .bg-transparent: This sets the navbar to be transparent.-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Portfolio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house"></i>  Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>  About Me</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/projects"><i class="fa-regular fa-folder-open"></i>  Projects</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/services"><i class="fa-solid fa-list"></i>  Services</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/contact"><i class="fa-solid fa-id-badge"></i>  Contact</a>
+                  </li>
+                <nav id="searchBar"> 
+                <form class="d-flex" role="search">
+                  <input class="form-control ms-auto mb-2 mb-lg-0" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </nav> 
+
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <!--Content-->
+        
     <h1>Hello World</h1>
     <table>
         <tr>
@@ -23,9 +77,13 @@
             <th>Stall</th>  
             <td>Typically of a vehicle or engine that stops working due to the overload of the engine</td>
         </tr>
-        <th></th>   
-        <td></td>
     </table>
+
+    </main>
+
+    <footer>
+        <!--Site-wide footer-->
+    </footer>
     <!--JavaScript Section-->
     <script src="./jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
