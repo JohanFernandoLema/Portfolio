@@ -15,5 +15,4 @@
     }
     window.addEventListener("load", Start);
 })();
-
 //# sourceMappingURL=app.js.map
