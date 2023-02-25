@@ -1,35 +1,32 @@
 import express from 'express';
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'Johan Lema Portfolio', page: 'home' });
-});
+/*Import controller modules*/
+import {DisplayHomePage} from '../Controllers/index';
+import {DisplayAboutPage} from '../Controllers/index';
+import {DisplayProjectsPage} from '../Controllers/index';
+import {DisplayServicesPage} from '../Controllers/index';
+import {DisplayContactPage} from '../Controllers/index';
+
+
 
 /* GET home page. */
-router.get('/home', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'Home', page: 'home' });
-});
+router.get('/', DisplayHomePage);
+
+/* GET home page. */
+router.get('/home', DisplayHomePage);
 
 /* GET About page. */
-router.get('/about', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'About Me', page: 'about' });
-});
+router.get('/about', DisplayAboutPage) ;
 
 /* GET Projects page. */
-router.get('/projects', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'My Projects', page: 'projects' });
-});
+router.get('/projects', DisplayProjectsPage);
 
 /* GET Services page. */
-router.get('/services', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'Services', page: 'services' });
-});
+router.get('/services', DisplayServicesPage);
 
 /* GET Contact page. */
-router.get('/contact', function(req: express.Request, res: express.Response, next: express.NextFunction) {
-  res.render('index', { title: 'Contact', page: 'contact' });
-});
+router.get('/contact', DisplayContactPage);
 
 
 export default router;
