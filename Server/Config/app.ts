@@ -15,20 +15,20 @@ const app = express();
 
 
 //DB configuaration import
-// import * as DBconfig from "./db";
-// mongoose.connect(DBconfig.LocalURI);
+import * as DBconfig from "./db";
+mongoose.connect(DBconfig.LocalURI);
 
-// const db = mongoose.connection;
+const db = mongoose.connection;
 
-// db.on("open", function()
-// {
-//   console.log(`Connected at mongoDB at: ${DBconfig.HostName}`);
-// });
+db.on("open", function()
+{
+  console.log(`Connected at mongoDB at: ${DBconfig.HostName}`);
+});
 
-// db.on("error", function()
-// {
-//   console.error("Connection Error");
-// });
+db.on("error", function()
+{
+  console.error("Connection Error");
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, '../Views'));
