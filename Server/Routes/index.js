@@ -10,13 +10,11 @@ const index_2 = require("../Controllers/index");
 const index_3 = require("../Controllers/index");
 const index_4 = require("../Controllers/index");
 const index_5 = require("../Controllers/index");
-const index_6 = require("../Controllers/index");
 router.get('/', index_1.DisplayHomePage);
 router.get('/home', index_1.DisplayHomePage);
 router.get('/about', index_2.DisplayAboutPage);
 router.get('/projects', index_3.DisplayProjectsPage);
 router.get('/services', index_4.DisplayServicesPage);
 router.get('/contact', index_5.DisplayContactPage);
-router.get('/movie-list', index_6.DisplayMovieList);
 exports.default = router;
 //# sourceMappingURL=index.js.map

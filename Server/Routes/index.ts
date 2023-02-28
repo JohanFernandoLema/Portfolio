@@ -7,9 +7,6 @@ import {DisplayAboutPage} from '../Controllers/index';
 import {DisplayProjectsPage} from '../Controllers/index';
 import {DisplayServicesPage} from '../Controllers/index';
 import {DisplayContactPage} from '../Controllers/index';
-import {DisplayMovieList} from '../Controllers/index';
-
-
 
 /* GET home page. */
 router.get('/', DisplayHomePage);
@@ -29,9 +26,5 @@ router.get('/services', DisplayServicesPage);
 /* GET Contact page. */
 router.get('/contact', DisplayContactPage);
 
-
-
-/* TEMPORARY ROUTE */
-router.get('/movie-list', DisplayMovieList);
 
 export default router;
