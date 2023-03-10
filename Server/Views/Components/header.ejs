@@ -7,28 +7,53 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house"></i>  Home</a>
+            <a class="nav-link <%=(page == 'home') ? 'active' : ''; %>" aria-current="page" href="/home"><i class="fa-solid fa-house"></i>  Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>  About Me</a>
+            <a class="nav-link <%=(page == 'about') ? 'active' : ''; %>" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>  About Me</a>
+          </li>
+
+          <%if(page == 'projects') {%>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/projects"><i class="fa-regular fa-folder-open"></i>  Projects</a>
+            </li>
+          <%} else { %>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/projects"><i class="fa-regular fa-folder"></i>  Projects</a>
+            </li>
+          <% }%>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link <%=(page == 'services') ? 'active' : ''; %>" aria-current="page" href="/services"><i class="fa-solid fa-list"></i>  Services</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/projects"><i class="fa-regular fa-folder-open"></i>  Projects</a>
+            <a class="nav-link <%=(page == 'contact') ? 'active' : ''; %>" aria-current="page" href="/contact"><i class="fa-solid fa-id-badge"></i>  Contact</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/services"><i class="fa-solid fa-list"></i>  Services</a>
-          </li>
+
+          <% if(displayName) { %>
+             
+            <li class="nav-item">
+              <a class="nav-link <%=(page == 'movie-list') ? 'active' : ''; %>" aria-current="page" href="/movie-list"><i class="fa-solid fa-film"></i>  Login</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/logout"><i class="fa-solid fa-right-from-bracket"></i>  Logout</a>
+            </li>
+
+          <%} else { %>
 
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/contact"><i class="fa-solid fa-id-badge"></i>  Contact</a>
+            <a class="nav-link <%=(page == 'login') ? 'active' : ''; %>" aria-current="page" href="/login"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/movie-list"><i class="fa-solid fa-id-badge"></i>  Movies</a>
-          </li>
+          <% } %>
+
+
         <nav id="searchVar"> 
         <form class="d-flex" role="search">
           <input class="form-control ms-auto mb-2 mb-lg-0" type="search" placeholder="Search" aria-label="Search">

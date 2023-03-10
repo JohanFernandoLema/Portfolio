@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProcessLogoutPage = exports.ProcessRegiterPage = exports.ProcessLoginPage = exports.DisplayRegisterPage = exports.DisplayLoginPage = void 0;
 function DisplayLoginPage(req, res, next) {
-    res.render('index', { title: "Login", page: 'login', message: req.flash('loginMessage'), displayName: '' });
+    res.render('index', { title: "Login", page: 'login', messages: req.flash('loginMessage'), displayName: '' });
 }
 exports.DisplayLoginPage = DisplayLoginPage;
 function DisplayRegisterPage(req, res, next) {
