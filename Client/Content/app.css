@@ -44,14 +44,42 @@ body{font-family: Arial, Helvetica, sans-serif ; background-color: gray;}
 #searchVar{position: absolute; left:85%;}
 
 /*about page CSS*/
+#softDevelop:checked ~ nav label.softDevelop,
+#databaseInfo:checked ~ nav label.databaseInfo,
+#webDevelopment:checked ~ nav label.webDevelopment{color: black;}
+
+.wrapper > div {background-color: blue;}
+
+.wrapper{max-width:  50%; margin: 130px auto; height: auto; background: #fff; padding: 25px; border-radius: 5px; display: grid; grid-template-columns: 40% 60%; }
+.wrapper nav{position: relative; display: flex; flex-direction: column; z-index: 1;}
+.wrapper nav label{height: 100%; cursor: pointer; margin: 25px 0px 25px 0px; color: black;}
+.wrapper nav .slider{position: absolute; height: 55px; width: 55%; background-color: red; border-radius: 5px; z-index: 0; top: 10px; transition: all 0.3s ease;}
+
+#softDevelop:checked ~ section .content-1,
+#databaseInfo:checked ~ section .content-2,
+#webDevelopment:checked ~ section .content-3{display: block;}
+
+section .content{display: none;}
+
+
+#databaseInfo:checked~ nav .slider{top: 37%;}
+#webDevelopment:checked~ nav .slider{top: 71%;}
+
+
+
+section .title{font-size: 20px; font-weight: 500; margin: 30px 0px 10px 0px;}
 
 
 /*contact page CSS*/
-#contactMe{width: 50%; background-color: gray; border-radius: 3%; padding: 3%; opacity: .6; }
+.contactForm{width: 45%; background-color: gray; border-radius: 3%; padding: 3%; opacity: .6; }
 #myInfo{background-color: bisque; text-align: center;}
-a{display: block;}
-#contactMain{background-color: white; padding: 2%; width: 80%; margin-left: auto; margin-right: auto;}
+#contactMain{background-color: white; padding: 2%; width: 80%; margin-left: auto; margin-right: auto; }
+.containerContact{display: flex; justify-content: space-around;}
+.imageContact{width: 100px; height: 100xp;}
+input[type="radio"]{display: none;}
+
 /*home page CSS*/
+
 
 /*projects page CSS*/
 
