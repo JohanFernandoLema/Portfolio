@@ -1,59 +1,61 @@
 <body>
-    <header>
-        <div class="container">
-            <h1><%= title%></h1>
-        </div>
-    </header>
+<header></header>
     <main id="contactMain">
 
-        <h1>Do you want to get in touch?</h1>
-        <h3>Send me a messsage</h3>
+        <h1 class="mainMessage">Do you want to get in touch?</h1>
+
+    </main>
+
+    <div class="wrapperContact">
+        <!-- Form side -->
         <div class="container form-floating mt-6 pt-3" id="contactMe">
-    <div class="containerContact">
-    <form action="/home" class="contactForm">
+            <div class="containerContact">
+            <form action="/home" class="contactForm">
+                
+                    <div class="form-floating mb-5 mt-5 firstAndSecond">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Name">
+                        <label for="floatingName">Name</label>
+                    </div>
+                    <div class="form-floating mb-5 firstAndSecond">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                        <label for="floatingPassword">Last Name</label>
+                    </div>
         
-            <div class="form-floating mb-5 mt-5 ">
-                <input type="text" class="form-control" id="floatingName" placeholder="Name">
-                <label for="floatingName">Name</label>
-            </div>
-            <div class="form-floating mb-5">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
-                <label for="floatingPassword">Last Name</label>
-            </div>
-
-            <div class="form-floating mb-5">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-          </div>
-
-              <div class="form-floating">
-                <textarea name="messageToShare" id="floatingMessage" class="form-control" placeholder="Message"></textarea>
-                <label for="floatingMessage">Message</label>
-              </div>
-
-              <button type="submit" class="btn btn-dark mt-5" id="submit">Submit</button>
-              <button class="btn btn-dark mt-5" id="reset" type="reset">Reset</button>
-
-    </form>
-
-        <div>
-            <div>
-                <h4>2152 Lawrence Avenue East</h4>
-                <h4>+1 647-581-6217</h4>
-                <h3>Service Hours: 9:00 am - 16:00 pm</h3>
-            </div>   
-            <div class="alignItems">
-
-                <h2>Follow Me</h2>
- <hr>
-
-                <a href="mailto:johan.13fernando@gmail.com" ><img src="./Assets/images/e-mail.png" alt="e-mail" class="imageContact"></a>
-                <a href="https://www.instagram.com/johan_srfernando/"><img src="./Assets/images/instagram.png" alt="instagram" class="imageContact"></a>
-                <a href="https://www.linkedin.com/in/johan-lema-farinango-a02b11220/"><img src="./Assets/images/linkedIn.png" alt="LinkedIn" class="imageContact"></i></a>
-                <a href="http://"><img src="./Assets/images/GitHub.png" alt="gitHub" class="imageContact"></a>
+                    <div class="form-floating mb-5">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                  </div>
+        
+                      <div class="form-floating">
+                        <textarea name="messageToShare" id="floatingMessage" class="form-control" placeholder="Message"></textarea>
+                        <label for="floatingMessage">Message</label>
+                      </div>
+        
+                      <button type="submit" class="btn btn-dark mt-5 buttons" id="submit">Submit</button>
+                      <button class="btn btn-dark mt-5 buttons" id="reset" type="reset">Reset</button>
+        
+            </form>
+            </div>    
+        </div>
+        <!-- Icons side -->
+        <div id="contactInfo">
+            <h2 id="messagePadd">Send me a message for further information</h2>
+            <a href="https://www.google.com/maps/place/2152+Lawrence+Ave+E,+Scarborough,+ON+M1R+0B5/@43.74792,-79.2880487,17z/data=!3m1!4b1!4m6!3m5!1s0x89d4d1fe9631ea3d:0x7e4c1fc30e38478b!8m2!3d43.74792!4d-79.28586!16s%2Fg%2F11h31zx026"><i class="fa-solid fa-building"></i> 2152Lawrence Avenue East</a>
+            <a href="tel:+1 6475816217"><i class="fa-solid fa-phone"></i> +1 647-581-6217</a>
+            <a href="mailto:johan.13fernando@gmail.com"><i class="fa-solid fa-envelope"></i> johan.13fernando@gmail.com</a>
+            <h2 class="info">Follow Me</h2>
+            <hr>
+            <div id="imagesInContact">
+                <a href="https://www.instagram.com/johan_srfernando/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/johan-lema-farinango-a02b11220/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/JohanFernandoLema"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </div>
-    </main>
-    <footer></footer>
+
+
+
+
+
+
 
