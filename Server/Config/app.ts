@@ -17,12 +17,11 @@ import flash from 'connect-flash';
 import cors from 'cors';
 
 let localStrategy = passportLocal.Strategy;
-import User from '../Models/user';
+
 
 //import the router data
 import indexRouter from '../Routes/index';
 import movieListRouter from '../Routes/movie-list';
-import authRouter from '../Routes/auth';
 
 
 const app = express();
@@ -71,17 +70,12 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Implement the auth strategy
-passport.use(User.createStrategy());    
 
-//Set up serialization and desearialization (encoding and decoding)
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser()); 
 
 //Use Routes
 app.use('/', indexRouter);
 app.use('/', movieListRouter);
-app.use('/', authRouter);
+
   
 
 // catch 404 and forward to error handler
