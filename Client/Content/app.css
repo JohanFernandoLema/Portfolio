@@ -1,41 +1,3 @@
-.input-group-addon:first-child{border-right: 0;}
-
-.input-group-addon{padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1; text-align: center; border: 1px solid darkgray; border-radius: 4px;}
-
-.input-group-addon .fa{font-size: 18px;}
-
-.input-group .form-control
-{
-    position:relative;
-    z-index: 2;
-    float:left;
-    margin-bottom: 0;
-}
-
-.input-group .form-control:last-child
-{
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-
-
-.login
-{
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: lightgrey;
-    border-radius: .3rem;
-}
-
-.login input
-{
-    background-color: white;
-    border-color: darkgrey;
-    border-radius: .4em;
-    width: 100%;
-}
-
 /*All pages*/
 h3{text-align: center;}
 *, *::before, *:after{
@@ -44,14 +6,45 @@ h3{text-align: center;}
 }
 
 body {
-background: #1f242d;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-weight: 500px;
-color: #fff;
+    background: radial-gradient(circle, hsla(0, 0%, 86%, 1) 0%, hsla(270, 94%, 25%, 1) 54%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+    color: lightblue;
 }
 
 /*header css*/
-#searchVar{position: absolute; left:85%;}
+.navbar{
+    background-color: gray;
+}
+.navbarAnimation a{
+    position:relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navbarAnimation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 100px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;  
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navbarAnimation li a:hover::after
+{
+    transform-origin: left;
+    transform:scaleX(1);
+}
 
 /*about page CSS*/
 .carroucelMyp{width: 500px; height: 500px;}
@@ -84,19 +77,126 @@ aside .title{font-size: 20px; font-weight: 500; margin: 30px 0px 10px 0px;}
 
 
 /*contact page CSS*/
-.wrapperContact{display: grid; grid-template-columns: 60% 40%;  height: auto; margin-right: auto; margin-left: auto; width: 80%; height: auto; margin-top:30px;}
+.wrapperContact{
+    display: grid; 
+    grid-template-columns: 60% 40%;  
+    height: auto; margin-right: auto; 
+    margin-left: auto; 
+    width: 80%; 
+    height: auto; 
+    margin-top: 4.5%;
+    position:relative;
+}
 
-.contactForm{width: 80%; align-items: center; text-align: center; align-items: center; margin-left: auto; margin-right: auto; background-color: #E8B4B8; padding: 30px; border-radius: 50px;} 
-#contactInfo{align-items: center; text-align: center; padding: 30px; font-size: 1.5rem; margin-top: 10%;}
-a{display: block; text-decoration: none; }
-a:link{color: black;}
-#messagePadd{margin-bottom: 30px; font-size: 40px;}
-.buttons{margin: 0px 0px 10px 20px}
-.mainMessage{margin-top: 40px; font-size: 50px;}
-.info{margin-bottom: 40px; margin-top: 20px;}
+.contactForm{
+    width: 80%;
+    background-color: #E8B4B8;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+} 
+form{
+    color: black;
+    width:80%;
+    max-width:768px;
+    border:1px solid #ddd;
+    padding:3vw;
+    display:flex;
+    flex-direction:column;
+    border-radius:10px;
+    font-size: 17px;
+    backdrop-filter: blur(20px);
+}
+label{
+    margin-bottom:15px;
+    position:relative;   
+}    
+textarea{
+        margin-top: 23px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        width: 100%;
+}
+    input{
+        width:100%;
+        padding:10px 0px;
+        width: 100%;
+        height: 40px;
+        margin-top:20px;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+    }
+    input::placeholder{
+        opacity:0;
+    }
+    span{
+        position:absolute;
+        top:0;
+        left:0;
+        transform:translateY(30px);
+        transition-duration:300ms;
+    }
+    button{
+        padding:15px 0px; 
+        margin-top:20px;
+        background:purple;
+        color:#fff;
+        border:1px solid purple;
+        cursor:pointer;
+        border-radius:3px;
+    }
+label:focus-within > span,
+input:not(:placeholder-shown) + span{
+    color:purple;
+    transform:translateY(0px);
+}
 
-.imagesInContact a{display: inline-flex; background: transparent; transition: .1s ease; border: 2px solid #fff; font-size: 50px; border-radius: 10px; margin:0px 20px 0px 20px; justify-content: center; align-items: center; width: 70px; height: 70px; }
-.imagesInContact a:hover{background-color: black; color: #fff;}
+/* Links and social media side */
+.phoneAndEmail a{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.phoneAndEmail h3{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* Override block display from above selector */
+.imagesInContact a
+{
+    display: inline-block;
+    border: 1px solid black; 
+    width: 10%; 
+    height: 30%;
+    border-radius: 20px; 
+    font-size: 40px; 
+    margin: 0 10px;
+}
+.contactInfo{
+    text-align: center;
+    padding-top: 60px;
+    color: black;
+    
+}
+.headLineTop{
+    text-align: left;
+    padding-bottom: 60px;
+    font-weight: 50px;
+    font-weight: bolder;
+}
+.followMe
+{
+    text-align: left;   
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-weight: bolder;
+}
 
 
 
