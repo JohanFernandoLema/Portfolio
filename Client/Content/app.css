@@ -15,35 +15,23 @@ body {
 }
 
 /*header css*/
-.navbar{
-    background-color: gray;
-}
-.navbarAnimation a{
-    position:relative;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
-.navbarAnimation a::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 6px;
-    width: 100px;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;  
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
+.primary-header{
+    background-color: #03C988;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbarAnimation li a:hover::after
-{
-    transform-origin: left;
-    transform:scaleX(1);
+.primary-navigation{    
+    display: flex;
+    list-style:none;
+}
+
+.primary-navigation li a{    
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 15px;
 }
 
 /*about page CSS*/
@@ -201,7 +189,10 @@ input:not(:placeholder-shown) + span{
 
 
 /*home page CSS*/
-.homeEdit{float: none; display: grid; grid-template-columns: 60% 40%; margin-top: 9%;  }
+.flex{
+    display: flex;   
+    align-items: center;
+}
 .intro{font-size: 70px;}
 .intro h1{font-size: 32px; font-weight: 700px; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay: .4s;}
 .intro h1:nth-of-type(2){animation: slideTop 1s ease forwards; animation-delay: .4s;}
@@ -234,9 +225,20 @@ footer{padding-top: 5%;}
 
 
  /* Responsiveness for website */
-@media only screen and (max-width: 600px) {
-  .containerServices{display: block;}
-  }
+@media only screen and (max-width: 35em) {
+  .primary-navigation{
+    position: fixed;
+    inset: 0 0 0 35%;
+    flex-direction: column;
+    background: steelblue;
+    /* Top , left - We used minimun in order to resize the screen in smaller phones. */
+    padding: min(5vh, 10rem) 2rem;
+    }
+
+    .primary-navigation li a{
+    margin-top: 20px;
+    }
+}
 
 
 /* KeyFramesForWebsite */
