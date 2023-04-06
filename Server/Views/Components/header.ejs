@@ -3,39 +3,38 @@
     <img src="./Assets/images/logo-white.png" alt="image" style="width: 70; height: 70px;">
   </div>
 
-
-        <ul id="list-nav" class="primary-navigation">
+  <button aria-controls="primary-navigation" aria-current="activated" aria-expanded="false" class="mobile-nav-toggle disappearBtn"><i class="fa-solid fa-bars"></i><span class="sr-only">Menu</span></button>
+  
+        <ul data-visible="false" id="list-nav" class="primary-navigation">
           <li class="nav-item">
-            <a class="nav-link <%=(page == 'home') ? 'active' : ''; %>" aria-current="page" href="/home"><i class="fa-solid fa-house"></i>Home</a>
+            <a class="nav-link <%=(page == 'home') ? 'active' : ''; %>" aria-current="page" href="/home"><span><i class="fa-solid fa-house"></i></span>Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link <%=(page == 'about') ? 'active' : ''; %>" aria-current="page" href="/about"><i class="fa-solid fa-circle-info"></i>About Me</a>
+            <a class="nav-link <%=(page == 'about') ? 'active' : ''; %>" aria-current="page" href="/about"><span><i class="fa-solid fa-circle-info"></i></span>About Me</a>
           </li>
 
           <%if(page == 'projects') {%>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/projects"><i class="fa-regular fa-folder-open"></i>Projects</a>
+              <a class="nav-link active" aria-current="page" href="/projects"><span><i class="fa-regular fa-folder-open"></i></span>Projects</a>
             </li>
           <%} else { %>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/projects"><i class="fa-regular fa-folder"></i>Projects</a>
+              <a class="nav-link" aria-current="page" href="/projects"><span><i class="fa-regular fa-folder"></i></span>Projects</a>
             </li>
           <% }%>
 
-
-
           <li class="nav-item">
-            <a class="nav-link <%=(page == 'services') ? 'active' : ''; %>" aria-current="page" href="/services"><i class="fa-solid fa-list"></i>  Services</a>
+            <a class="nav-link <%=(page == 'services') ? 'active' : ''; %>" aria-current="page" href="/services"><span><i class="fa-solid fa-list"></i></span>Services</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link <%=(page == 'contact') ? 'active' : ''; %>" aria-current="page" href="/contact"><i class="fa-solid fa-id-badge"></i>  Contact</a>
+            <a class="nav-link <%=(page == 'contact') ? 'active' : ''; %>" aria-current="page" href="/contact"><span><i class="fa-solid fa-id-badge"></i></span>Contact</a>
           </li>
 
 
              
             <li class="nav-item">
-              <a class="nav-link <%=(page == 'movie-list') ? 'active' : ''; %>" aria-current="page" href="/movie-list"><i class="fa-solid fa-film"></i>  My Favorite Movies</a>
+              <a class="nav-link <%=(page == 'movie-list') ? 'active' : ''; %>" aria-current="page" href="/movie-list"><span><i class="fa-solid fa-film"></i></span>My Favorite Movies</a>
             </li>
   </nav>
