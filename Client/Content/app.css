@@ -6,7 +6,8 @@ h3{text-align: center;}
 }
 
 body {
-    background-image: url('../Assets/images/background.png');
+    background-image: url('../Assets/images/trilliumBack.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, sans-serif;
     font-size: 20px;
@@ -65,7 +66,7 @@ span{
     backdrop-filter: blur(1rem);
 }
 
-.container h1{
+.container #aboutMe{
     text-align: center;
     align-items: center;
 }
@@ -143,19 +144,38 @@ label{
     font-weight:700;
     font-size: 50px
 }
-
-
-/********* HOME PAGE RESPONSIVENESS *********/
 .flex{
     display: flex;   
     align-items: center;
 }
-.intro{font-size: 70px;}
-.intro h1{font-size: 32px; font-weight: 700px; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay: .4s;}
-.intro h1:nth-of-type(2){animation: slideTop 1s ease forwards; animation-delay: .4s;}
-.intro h2{font-size: 56px; animation: slideRight 1s ease forwards; animation-delay: .7s; opacity: 0; }
-.intro h1 b{color: #03C988;}
-#statement{font-size: 25px; margin-top: 25px;}
+/********* HOME PAGE **********/
+.intro h1{
+    font-size: 45px; 
+    font-weight: 700px; 
+    opacity: 0;
+    animation: slideBottom 1s ease forwards; 
+    animation-delay: .4s;
+}
+.intro h1:nth-of-type(2){
+    animation: slideTop 1s ease forwards; 
+    animation-delay: .4s;
+}
+.intro h2{
+    font-size: 75px; 
+    animation: slideRight 1s ease forwards; 
+    animation-delay: .7s; 
+    opacity: 0; 
+}
+.intro h1 b{
+    color: #03C988;
+}
+
+#statement{
+    font-size: 25px; 
+    padding: 30px 0px;
+    animation: slideTop 1s ease forwards;
+}
+
 button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 20px;}
 .aboutLink:hover{color: white; background-color: rgb(36, 167, 36);}
 .aboutLink{color: black; background-color: #fff; transition: .1s ease;}
