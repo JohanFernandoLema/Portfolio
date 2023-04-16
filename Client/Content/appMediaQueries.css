@@ -26,6 +26,10 @@
           z-index: 9999;
           align-items: center;
       }
+      .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
       /* .mobile-nav-toggle[aria-expanded="true"]{
           background-image: url(../Assets/images/jira.png);
       } */
@@ -34,9 +38,16 @@
       .primary-navigation li a span{
           display: none;
       }
+      .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+      body{background: red;}
   }
   @media (min-width: 700px) {
       .primary-navigation li a span{
           display: none;
       }
+
   }
