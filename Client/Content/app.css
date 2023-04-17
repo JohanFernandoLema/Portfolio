@@ -1,4 +1,7 @@
-/*All pages*/
+/* ================== GLOBAL VARIABLES ================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 h3{text-align: center;}
 *, *::before, *:after{
     box-sizing: inherit;
@@ -9,7 +12,7 @@ body {
     background-image: url('../Assets/images/trilliumBack.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: poppins, 'sans-serif';
     font-size: 20px;
     color: lightblue;
 }
