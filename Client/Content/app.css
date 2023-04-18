@@ -58,21 +58,7 @@ span{
 }
 
 /*******ABOUT PAGE LAYOUT*******/
-.firstCarrousel{
-    border-radius: 20px;
-    padding: 40px;
-    display: flex;
-    justify-content: space-around;
-    width: auto;
-    height: auto;
-    background: hsla(172, 0%, 100%, 0.1);
-    backdrop-filter: blur(1rem);
-}
 
-.container #aboutMe{
-    text-align: center;
-    align-items: center;
-}
 
 
 /*******CONTACT PAGE LAYOUT*******/
@@ -182,10 +168,27 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 .aboutLink:hover{color: white; background-color: rgb(36, 167, 36);}
 .aboutLink{color: black; background-color: #fff; transition: .1s ease;}
 
-#myPhoto{margin-left: 30px; margin-bottom: 20px; border-radius: 80px; box-shadow: 10px 10px 10px white; width: 600px; height: 400px;}
-.photoMax{max-width: 600%;}
+#myPhoto{margin-left: 30px; margin-bottom: 20px; border-radius: 80px; box-shadow: 10px 10px 10px white; width: 600px; height: 4 00px;}
 
-/*projects page CSS*/
+/* ====================== PROJECTS PAGE CSS ============================= */
+.firstCarrousel{
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    background: hsla(172, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+}
+.container .firstCarrousel:nth-of-type(1){
+    margin-bottom: 30px;
+}
+
+.container #aboutMe{
+    text-align: center;
+    align-items: center;
+}
 
 /*services page CSS*/
 .containerServices{width: 980px; margin: 0 auto; display: flex;}

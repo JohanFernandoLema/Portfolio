@@ -26,10 +26,49 @@
           z-index: 9999;
           align-items: center;
       }
-      .container{
+
+    /* =========== HOME PAGE ================= */
+    .container{
         display: grid;
         grid-template-columns: 1fr;
+        width: 95%;
     }
+    .intro h1{
+        font-size: 1rem; 
+        font-weight: 300px; 
+    }
+    .intro h2{
+        font-size: 2rem; 
+        opacity: 0; 
+    }
+    #statement{
+        font-size:1rem; 
+        padding: 10px 0px;
+        animation: slideTop 1s ease forwards;
+        text-align: justify;
+        width: 9 5%;
+    }
+    
+    button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 10px; margin-bottom: 10px;}
+
+    #myPhoto{
+        border-radius: 80px; 
+        box-shadow: 10px 10px 10px white; 
+        width: 80%; 
+        height: 550%;
+        
+    }
+
+
+
+    /* =================PROJECTS PAGE =============== */
+        .firstCarrousel{
+            display: flex;
+            grid-template-columns: 1fr;
+            background: transparent;
+
+        }
+    
       /* .mobile-nav-toggle[aria-expanded="true"]{
           background-image: url(../Assets/images/jira.png);
       } */
