@@ -11,9 +11,8 @@
       transition: transform 350ms ease-out;
       }
       .primary-navigation[data-visible="true"]{
-          transform: translateX(0%);
+          transform: translateX(30%);
       }
-  
       .primary-navigation li a{
       margin-top: 40px;
       }
@@ -46,7 +45,7 @@
         padding: 10px 0px;
         animation: slideTop 1s ease forwards;
         text-align: justify;
-        width: 9 5%;
+        width: 95%;
     }
     
     button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 10px; margin-bottom: 10px;}
@@ -68,11 +67,75 @@
             background: transparent;
 
         }
-    
-      /* .mobile-nav-toggle[aria-expanded="true"]{
-          background-image: url(../Assets/images/jira.png);
-      } */
+    /* ================ CONTACT PAGE ================ */
+    .wrapperContact{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        display: grid; 
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .wrapperContact .register .formContact label{
+        text-align: left;
+        position: relative;
+        right: 7.5rem;
+    }
+    .formContact{
+        border-radius: 25px;
+        width: 100%;
+        text-align: center;
+        padding-top: 60px;
+    }
+    label{
+        display: inline;
+    }
+
+    /* Links and social media side */
+.phoneAndEmail a, h3{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.phoneAndEmail{
+    padding-bottom: 30px;
+}
+
+/* Override block display from above selector */
+.imagesInContact a
+{
+    border: 1px solid black; 
+    width: 16%; 
+    height: 30%;
+    position: relative;
+    left:21%;
+    border-radius: 20px; 
+    font-size: 40px; 
+    margin: 0 10px 10px 0;
+    text-align: center;
+}
+.contactInfo{
+    padding-top: 30px;
+    color: black;
+}
+.headLines{
+    padding-bottom: 30px;
+    font-weight:300;
+    font-size: 3rem;
+    text-align: center;
+}
+.contactInfo h2:nth-of-type(2){
+    padding-bottom: .5rem;
+}
+.flex{
+    display: flex;   
+    align-items: center;
+}
   }
+
   @media (min-width: 35em) and (max-width: 55em) {
       .primary-navigation li a span{
           display: none;
