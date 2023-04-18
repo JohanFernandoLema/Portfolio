@@ -1,6 +1,10 @@
 /* ================== GLOBAL VARIABLES ================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --box-radious:20%;
+    
+}
 
 h3{text-align: center;}
 *, *::before, *:after{
@@ -36,10 +40,6 @@ span{
     list-style:none;
     background: hsl(0 0% 0% / 0.75);
     padding-bottom: 17px;   
-}
-
-.flex{
- margin-top: 7%;
 }
 /* Basically what Supports does is that when our website is used in a browser that supports this
    property it will use it, otherwise It will use the defaul value that is above*/
@@ -132,9 +132,10 @@ label{
     font-weight:700;
     font-size: 50px
 }
-.flex{
+.flexHome{
     display: flex;   
     align-items: center;
+    margin-top: 7%;
 }
 /********* HOME PAGE **********/
 .intro h1{
@@ -168,7 +169,11 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 .aboutLink:hover{color: white; background-color: rgb(36, 167, 36);}
 .aboutLink{color: black; background-color: #fff; transition: .1s ease;}
 
-#myPhoto{margin-left: 30px; margin-bottom: 20px; border-radius: 80px; box-shadow: 10px 10px 10px white; width: 600px; height: 4 00px;}
+#myPhoto{margin-left: 30px; 
+    margin-bottom: 20px; 
+    border-radius: 80px; 
+    box-shadow: 10px 10px 10px white; 
+    width: 600px; height: 400px;}
 
 /* ====================== PROJECTS PAGE CSS ============================= */
 .firstCarrousel{
