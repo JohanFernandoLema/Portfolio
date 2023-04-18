@@ -182,7 +182,7 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 .aboutLink:hover{color: white; background-color: rgb(36, 167, 36);}
 .aboutLink{color: black; background-color: #fff; transition: .1s ease;}
 
-#myPhoto{margin-left: 30px; margin-top: 20px; border-radius: 80px; box-shadow: 10px 10px 10px white;}
+#myPhoto{margin-left: 30px; margin-bottom: 20px; border-radius: 80px; box-shadow: 10px 10px 10px white; width: 600px; height: 400px;}
 .photoMax{max-width: 600%;}
 
 /*projects page CSS*/
