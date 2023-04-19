@@ -214,17 +214,60 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 }
 
 /* ====================== SERVICES PAGE CSS ============================= */
+.containerProjects h1{
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+    z-index: 999;
+}
+.webDevelopment{
+    gap: 2rem;
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 100px);
+    padding: 4rem;
+    border-radius: 30px;
+    flex-grow: 1;
+}
+.webDevelopment div span{
+    background: #000;
+    position: relative;
+    left: 40%;
+    bottom: 10%;    
+    font-size: 4rem;
+    padding: .3rem 1rem;
+    border-radius: 10%;
+    color: #fff;
+}
+.webDevelopment .htmlService{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
+.webDevelopment h3{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    color: black;
+}
+.webDevelopment .css{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
+.webDevelopment .javaScript{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
 
-.containerServices{width: 980px; margin: 0 auto; display: flex;}
-.cube{border: 2px solid black; border-radius: 25px; margin-top: 80px;}
-.cube h2{margin-bottom: 40px;}
-.cube1{align-items: center; text-align: center; display: block; padding: 20px 0px 20px 0px;}
-.cube2{align-items: center; text-align: center; display: block; padding: 20px 0px 20px 0px;}
-.cube3{align-items: center; text-align: center; display: block; padding: 20px 0px 20px 0px;}
-.servicesImages{width: 100px; height: 100px; margin: 40px 0px 50px 0px;}
-.paragraphServices{margin: 20px; text-align: center;}
-.contactMeServices{align-items: center; margin-top: 20px;}
-.cube input{border: none; width: 35%; font-size: 120%; height: 55px; border-radius: 16px; }
+
 
 /*footer css*/
 footer{padding-top: 5%;}
