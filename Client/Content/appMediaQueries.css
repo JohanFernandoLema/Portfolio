@@ -14,14 +14,15 @@
           transform: translateX(30%);
       }
       .primary-navigation li a{
-      margin-top: 40px;
+      margin-top: 30px;
       }
       .mobile-nav-toggle{
           display: block;
           position: absolute;
           background: transparent;
-          top: 2rem;
-          right: 2rem;
+          font-size: 1rem;
+          top:1rem;
+          right: 1rem;
           z-index: 9999;
           align-items: center;
       }
