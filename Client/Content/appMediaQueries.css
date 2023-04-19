@@ -60,21 +60,47 @@
 
 
 
-    /* =================PROJECTS PAGE =============== */
-    .wrapperProjects{
-        background: blue;
-        width: 50%;
-    }
+ /* =================PROJECTS PAGE =============== */
+.container .headingProjects{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+ .wrapperProjects{     
+    display: grid;
+    gap: 1rem;
+align-items: center;
+}
+.projectImages{
+    width: 70%;
+    height: 50%;
+}
+.wrapperProjects .firstCard{
+    padding: 1rem;
+    width: 92%;
+    border-radius: var(--border-radious);
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    text-align: center;
+}
+.wrapperProjects .secondCard{
+    padding: 1rem;
+    width: 92%;
+    border-radius: var(--border-radious);
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    text-align: center;
+}
+.wrapperProjects .thirdCard{
+    padding: 1rem;
+    width: 92%;
+    border-radius: var(--border-radious);
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    margin-left: 0;
+    text-align: center;
+}
 
-    .wrapperProjects .firstCard{
-        display: grid;
-        width: 20%;
-        grid-template-columns: 1fr;
-
-    }
-    .firstCarrousel .card1{
-        display: flex;
-    }
 
     
     /* ================ CONTACT PAGE ================ */

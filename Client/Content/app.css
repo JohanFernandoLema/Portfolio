@@ -187,12 +187,20 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 .wrapperProjects .firstCard{
     width: 50%;
     padding: 2rem;
+    margin-right: 30px;
     border-radius: var(--border-radious);
     background: #03C988;
 }
 .wrapperProjects .secondCard{
     width: 50%;
     padding: 2rem;
+    border-radius: var(--border-radious);
+    background: #03C988;
+}
+.wrapperProjects .thirdCard{
+    width: 50%;
+    padding: 2rem;
+    margin-left: 30px;
     border-radius: var(--border-radious);
     background: #03C988;
 }
