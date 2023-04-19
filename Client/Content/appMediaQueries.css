@@ -61,12 +61,22 @@
 
 
     /* =================PROJECTS PAGE =============== */
-        .firstCarrousel{
-            display: flex;
-            grid-template-columns: 1fr;
-            background: transparent;
+    .wrapperProjects{
+        background: blue;
+        width: 50%;
+    }
 
-        }
+    .wrapperProjects .firstCard{
+        display: grid;
+        width: 20%;
+        grid-template-columns: 1fr;
+
+    }
+    .firstCarrousel .card1{
+        display: flex;
+    }
+
+    
     /* ================ CONTACT PAGE ================ */
     .wrapperContact{
         position: absolute;
