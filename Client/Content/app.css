@@ -220,13 +220,12 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     bottom: 1rem;
     z-index: 999;
 }
+/* ==== WEB DEVELOPMENT ==== */
 .webDevelopment{
     gap: 2rem;
     background: hsla(286, 63%, 50%, 0.1);   
     backdrop-filter: blur(1rem);
     display: flex;
-    grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
     padding: 4rem;
     border-radius: 30px;
     flex-grow: 1;
@@ -267,7 +266,51 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     padding: 10px;
 }
 
-
+/* ==== SOFTWARE DEVELOPMENT */
+.softwareDevelopment{
+    gap: 2rem;
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    display: flex;
+    padding: 4rem;
+    border-radius: 30px;
+    flex-grow: 1;
+}
+.softwareDevelopment h3{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    color: black;
+}
+.softwareDevelopment div span{
+    background: #000;
+    position: relative;
+    left: 40%;
+    bottom: 10%;    
+    font-size: 4rem;
+    padding: .3rem 1rem;
+    border-radius: 10%;
+    color: #fff;
+}
+.softwareDevelopment .cSharp{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
+.softwareDevelopment .java{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
+.softwareDevelopment .python{
+    background: #fff;
+    border-radius: 1rem;
+    width: 60%;
+    padding: 10px;
+}
 
 /*footer css*/
 footer{padding-top: 5%;}

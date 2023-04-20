@@ -45,4 +45,3 @@ navToggle.addEventListener('click', function () {
     }
 });
 
-
