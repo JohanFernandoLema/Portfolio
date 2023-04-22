@@ -1,5 +1,3 @@
-import { fileLoader } from "ejs";
-
 //IIFE
 (function()
 {
@@ -47,5 +45,29 @@ navToggle.addEventListener('click', function () {
     }
 });
 
+// // Scrooling page effect
 
+// const faders = document.querySelectorAll('.fade-in');
+// const sliders = document.querySelectorAll('.slide-in');
 
+// const appearOptions = {
+//     // Properties to 
+//     threshold: 0,
+//     // rootMargin:
+//     //root 
+// }
+
+// const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+//     entries.forEach(entry => {
+//         if(!entry.isIntersecting){
+//             return;
+//         }else{
+//             entry.target.classList.add('appear');
+//             appearOnScroll.unobserve(entry.target); 
+//         }
+//     })
+// }, appearOptions);
+
+// sliders.forEach(slider => {
+//     appearOnScroll.observe(slider);
+// })

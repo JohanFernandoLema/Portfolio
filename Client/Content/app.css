@@ -62,6 +62,26 @@ span{
 .mainInfo{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.container .mainInfo .skills{
+    background: #fff;
+    border-radius: var(--border-radious);
+    padding: 2rem;
+    width: 50%;
+}
+.container .mainInfo .experience{
+    background: #fff;
+    border-radius: var(--border-radious);
+    padding: 2rem;
+    width: 50%;
+    margin: 0 20px;
+}
+.container .mainInfo .info{
+    background: #fff;
+    border-radius: var(--border-radious);
+    padding: 2rem;
+    width: 50%;
 }
 .mainInfo h2{
     text-align: center;
@@ -148,6 +168,8 @@ label{
     border-radius: 20px; 
     font-size: 40px; 
     margin: 0 10px;
+    position: relative;
+    left: 45px;
     text-align: center;
 }
 .contactInfo{
@@ -156,7 +178,7 @@ label{
 }
 .headLines{
     padding-bottom: 60px;
-    font-weight:700;
+    font-weight:400;
     font-size: 50px
 }
 .flexHome{
