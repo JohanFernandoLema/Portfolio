@@ -1,3 +1,5 @@
+import { fileLoader } from "ejs";
+
 //IIFE
 (function()
 {
@@ -44,4 +46,6 @@ navToggle.addEventListener('click', function () {
         navToggle.setAttribute("aria-expanded", "true");
     }
 });
+
+
 

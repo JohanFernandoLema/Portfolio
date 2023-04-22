@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 (function () {
     function Start() {
         console.log("App Started!");

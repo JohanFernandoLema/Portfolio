@@ -59,6 +59,14 @@ span{
 }
 
 /*******ABOUT PAGE LAYOUT*******/
+.mainInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.mainInfo h2{
+    text-align: center;
+}
+
 .container .volcano img{
     width: 100%;
     height: 110%;
@@ -68,16 +76,16 @@ span{
     width: 50%;
     height: 70%;
 }
-.container .aboutGrid{
+.aboutGrid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7rem;
     grid-auto-rows: minmax(100px, auto);
-    background-color: blue;
     text-align: center;
     align-items: center;
     padding: 2rem;
 }
+
 
 
 /*******CONTACT PAGE LAYOUT*******/
