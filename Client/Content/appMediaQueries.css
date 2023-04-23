@@ -31,7 +31,10 @@
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        width: 95%;
+        width: 90%;
+        padding: 0;
+        padding-bottom: .3rem;
+        margin-left: 2rem;
     }
     .intro h1{
         font-size: 1rem; 
@@ -46,20 +49,25 @@
         padding: 10px 0px;
         animation: slideTop 1s ease forwards;
         text-align: justify;
-        width: 95%;
     }
     
-    button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 10px; margin-bottom: 10px;}
-
+    button{border: none; 
+        padding: 10px 20px 10px 20px; 
+        border-radius: 16px; 
+        font-size: 10px; 
+        margin-bottom: 1.5rem;}
+    .aboutLink:hover{
+        background: #000;
+        color: #ddd;
+    }
     #myPhoto{
         border-radius: 80px; 
         box-shadow: 10px 10px 10px white; 
         width: 80%; 
-        height: 90%;
-        
+        height: 90%; 
+        margin-left: 2.3rem;
     }
-
-
+/* =================== ABOUT PAGE ================== */
 
  /* =================PROJECTS PAGE =============== */
 .container .headingProjects{

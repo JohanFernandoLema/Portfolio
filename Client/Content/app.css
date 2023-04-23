@@ -12,9 +12,11 @@ h3{text-align: center;}
     box-sizing: inherit;
     
 }
-
 body {
-    background-image: url('../Assets/images/trilliumBack.jpg');
+    /* background-image: url('../Assets/images/trilliumBack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-image: linear-gradient(135deg, black, white);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: poppins, 'sans-serif';
@@ -57,6 +59,127 @@ span{
     font-size: 1rem;
     margin-top: 15px;
 }
+
+/*******CONTACT PAGE LAYOUT*******/
+
+.wrapperContact{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: flex; 
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.formContact{
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    border-radius: 25px;
+    width: 800px;
+    text-align: center;
+    padding-top: 60px;
+}
+.formContact div input{
+    border-radius: 20px;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+}
+textarea{
+    border-radius: 20px;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+}
+label{
+    display: block;
+    position: relative;
+    right: 300px;
+}
+
+
+/* Links and social media side */
+.phoneAndEmail a, h3{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.phoneAndEmail{
+    padding-bottom: 30px;
+}
+
+/* Override block display from above selector */
+.imagesInContact a
+{
+    display: inline-block;
+    border: 1px solid darkcyan; 
+    width: 16%; 
+    height: 30%;
+    border-radius: 20px; 
+    font-size: 40px; 
+    margin: 0 10px;
+    position: relative;
+    left: 45px;
+    text-align: center;
+}
+.contactInfo{
+    padding-top: 30px;
+    color: black;
+    background: #fff;
+}
+.headLines{
+    padding-bottom: 60px;
+    font-weight:400;
+    font-size: 50px
+}
+
+/********* HOME PAGE **********/
+.flexHome{
+    display: flex;   
+    margin-top: 3.3rem;
+    padding: 6rem;
+}
+
+.intro h1{
+    font-size: 45px; 
+    font-weight: 400px; 
+    opacity: 0;
+    animation: slideBottom 1s ease forwards; 
+    animation-delay: .4s;
+}
+.intro h1:nth-of-type(2){
+    animation: slideTop 1s ease forwards; 
+    animation-delay: .4s;
+}
+.intro h2{
+    font-size: 75px; 
+    animation: slideRight 1s ease forwards; 
+    animation-delay: .7s; 
+    opacity: 0; 
+}
+.intro h1 b{
+    color: #03C988;
+}
+
+#statement{
+    font-size: 25px; 
+    padding: 30px 0px;
+    animation: slideTop 1s ease forwards;
+}
+
+button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 20px;}
+.aboutLink:hover{color: white; background:#000;}
+.aboutLink{color: black; background-color: #fff; transition: .1s ease;}
+
+#myPhoto{
+    margin-left: 30px; 
+    border-radius: 80px; 
+    box-shadow: 10px 10px 10px white; 
+    width: 600px; height: 400px;}
 
 /*******ABOUT PAGE LAYOUT*******/
 .mainInfo{
@@ -105,124 +228,6 @@ span{
     align-items: center;
     padding: 2rem;
 }
-
-
-
-/*******CONTACT PAGE LAYOUT*******/
-
-.wrapperContact{
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    display: flex; 
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-}
-.formContact{
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    border-radius: 25px;
-    width: 800px;
-    text-align: center;
-    padding-top: 60px;
-}
-.formContact div input{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
-}
-textarea{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
-}
-label{
-    display: block;
-}
-
-
-/* Links and social media side */
-.phoneAndEmail a, h3{
-    display: block;
-    text-align: left;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-}
-.phoneAndEmail{
-    padding-bottom: 30px;
-}
-
-/* Override block display from above selector */
-.imagesInContact a
-{
-    display: inline-block;
-    border: 1px solid darkcyan; 
-    width: 16%; 
-    height: 30%;
-    border-radius: 20px; 
-    font-size: 40px; 
-    margin: 0 10px;
-    position: relative;
-    left: 45px;
-    text-align: center;
-}
-.contactInfo{
-    padding-top: 30px;
-    color: black;
-}
-.headLines{
-    padding-bottom: 60px;
-    font-weight:400;
-    font-size: 50px
-}
-.flexHome{
-    display: flex;   
-    align-items: center;
-    margin-top: 7%;
-}
-/********* HOME PAGE **********/
-.intro h1{
-    font-size: 45px; 
-    font-weight: 700px; 
-    opacity: 0;
-    animation: slideBottom 1s ease forwards; 
-    animation-delay: .4s;
-}
-.intro h1:nth-of-type(2){
-    animation: slideTop 1s ease forwards; 
-    animation-delay: .4s;
-}
-.intro h2{
-    font-size: 75px; 
-    animation: slideRight 1s ease forwards; 
-    animation-delay: .7s; 
-    opacity: 0; 
-}
-.intro h1 b{
-    color: #03C988;
-}
-
-#statement{
-    font-size: 25px; 
-    padding: 30px 0px;
-    animation: slideTop 1s ease forwards;
-}
-
-button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 20px;}
-.aboutLink:hover{color: white; background-color: rgb(36, 167, 36);}
-.aboutLink{color: black; background-color: #fff; transition: .1s ease;}
-
-#myPhoto{margin-left: 30px; 
-    margin-bottom: 20px; 
-    border-radius: 80px; 
-    box-shadow: 10px 10px 10px white; 
-    width: 600px; height: 400px;}
 
 /* ====================== PROJECTS PAGE CSS ============================= */
 .wrapperProjects{
