@@ -3,14 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 :root{
     --border-radious:2rem;
-    /* --card-background:; */
-
+    --clr-neutral-900: hsl(207 19% 9%);
+    --clr-neutral-100: hsl(0 0% 100% );
+    --clr-accent-400: hsl(142 90% 61%);
 }
 
 h3{text-align: center;}
-*, *::before, *:after{
-    box-sizing: inherit;
-    
+*,
+*::before,
+*:after{
+    box-sizing: border-box;
 }
 body {
     /* background-image: url('../Assets/images/trilliumBack.jpg');
@@ -63,13 +65,11 @@ span{
 /*******CONTACT PAGE LAYOUT*******/
 
 .wrapperContact{
-    position: absolute;
-    top: 20%;
-    left: 10%;
     display: flex; 
     width: 80%;
     margin: 0 auto;
     justify-content: space-around;
+    padding: 6.7rem 0;
 }
 .formContact{
     background: hsla(286, 63%, 50%, 0.1);   
@@ -106,7 +106,7 @@ label{
     text-align: left;
     font-size: 20px;
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 .phoneAndEmail{
     padding-bottom: 30px;
@@ -129,7 +129,6 @@ label{
 .contactInfo{
     padding-top: 30px;
     color: black;
-    background: #fff;
 }
 .headLines{
     padding-bottom: 60px;
@@ -164,7 +163,6 @@ label{
 .intro h1 b{
     color: #03C988;
 }
-
 #statement{
     font-size: 25px; 
     padding: 30px 0px;
@@ -229,6 +227,76 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     padding: 2rem;
 }
 
+.wrappingCards{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+}
+.card{
+    background-image: url(../Assets/images/gym.jpg);
+    background-position: bottom;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease-in;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-content{
+    --padding:1rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / .3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+    transform: translateY(82%);
+    transition: transform 500ms ease-in;
+    cursor: pointer;
+}
+.card:hover .card-content{
+    transform: translateY(0);
+}
+
+.card-title{
+    position: relative;
+}
+.card-title::after{
+    content: "";
+    position: absolute;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    height: 3px;
+    background-color: var(--clr-accent-400);
+    width: calc(84% + var(--padding));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-accent-400);
+    padding: 0.5em 1.25em;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+}
+
+.button:hover,
+.button:focus{
+    background-color: var(--clr-neutral-100);
+}
 /* ====================== PROJECTS PAGE CSS ============================= */
 .wrapperProjects{
     display: flex;

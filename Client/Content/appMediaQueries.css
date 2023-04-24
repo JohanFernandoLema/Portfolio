@@ -114,18 +114,20 @@ align-items: center;
     
     /* ================ CONTACT PAGE ================ */
     .wrapperContact{
-        position: absolute;
-        top: 20%;
-        left: 10%;
         display: grid; 
         grid-template-columns: 1fr;
         width: 80%;
         margin: 0 auto;
+        padding: 0;
     }
     .wrapperContact .register .formContact label{
         text-align: left;
         position: relative;
         right: 7.5rem;
+    }
+    .phoneAndEmail a, h3{
+        position: relative;
+        left: 3rem;
     }
     .formContact{
         border-radius: 25px;
