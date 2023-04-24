@@ -139,7 +139,7 @@ label{
 /********* HOME PAGE **********/
 .flexHome{
     display: flex;   
-    margin-top: 3.3rem;
+    margin-top: 1rem;
     padding: 6rem;
 }
 
@@ -243,7 +243,8 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     overflow: hidden;
     transition: transform 500ms ease-in;
 }
-.card:hover{
+.card:hover,
+.card:focus-within{
     transform: scale(1.05);
 }
 
@@ -255,12 +256,35 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
         hsl(20 0% 0% / .3) 20%,
         hsl(0 0% 0% / 1)
     );
-    transform: translateY(82%);
-    transition: transform 500ms ease-in;
-    cursor: pointer;
 }
-.card:hover .card-content{
-    transform: translateY(0);
+
+/* When we are using a primary pointing device (either touch screen or mouse) */
+/* We are using this property for mobiles since their primary device is touching the screen */
+@media (hover){
+    .card-content{
+        transform: translateY(82%);
+        transition: transform 500ms ease-in;
+    }
+    .card:hover .card-content,
+    .card:focus-within .card-content{
+        transform: translateY(0);
+        transition-delay: 500ms ;
+    }
+    .card:focus-within .card-content{
+        transition-duration: 0ms;
+    }
+    .card-content > *:not(.card-title) {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+    }
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+    .card-title:after{
+        transform: scaleX(0);
+    }
 }
 
 .card-title{
@@ -270,15 +294,18 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     content: "";
     position: absolute;
     left: calc(var(--padding) * -1);
-    bottom: 0;
+    bottom: -2.4px;
     height: 3px;
     background-color: var(--clr-accent-400);
     width: calc(84% + var(--padding));
-    transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease;
 }
 .card:hover .card-title::after{
+    transform: scaleX(1);
+}
+.card:hover .card-title::after,
+.card:focus-within .card-title::after{
     transform: scaleX(1);
 }
 .button{

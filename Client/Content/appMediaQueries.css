@@ -33,8 +33,6 @@
         grid-template-columns: 1fr;
         width: 90%;
         padding: 0;
-        padding-bottom: .3rem;
-        margin-left: 2rem;
     }
     .intro h1{
         font-size: 1rem; 
@@ -46,16 +44,17 @@
     }
     #statement{
         font-size:1rem; 
-        padding: 10px 0px;
         animation: slideTop 1s ease forwards;
         text-align: justify;
     }
     
-    button{border: none; 
+    button{
+        border: none; 
         padding: 10px 20px 10px 20px; 
         border-radius: 16px; 
         font-size: 10px; 
-        margin-bottom: 1.5rem;}
+        margin-bottom: 1.5rem;
+    }
     .aboutLink:hover{
         background: #000;
         color: #ddd;
