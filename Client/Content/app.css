@@ -62,80 +62,6 @@ span{
     margin-top: 15px;
 }
 
-/*******CONTACT PAGE LAYOUT*******/
-
-.wrapperContact{
-    display: flex; 
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-    padding: 6.7rem 0;
-}
-.formContact{
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    border-radius: 25px;
-    width: 800px;
-    text-align: center;
-    padding-top: 60px;
-}
-.formContact div input{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
-}
-textarea{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
-}
-label{
-    display: block;
-    position: relative;
-    right: 300px;
-}
-
-
-/* Links and social media side */
-.phoneAndEmail a, h3{
-    display: block;
-    text-align: left;
-    font-size: 20px;
-    text-decoration: none;
-    color: #000;
-}
-.phoneAndEmail{
-    padding-bottom: 30px;
-}
-
-/* Override block display from above selector */
-.imagesInContact a
-{
-    display: inline-block;
-    border: 1px solid darkcyan; 
-    width: 16%; 
-    height: 30%;
-    border-radius: 20px; 
-    font-size: 40px; 
-    margin: 0 10px;
-    position: relative;
-    left: 45px;
-    text-align: center;
-}
-.contactInfo{
-    padding-top: 30px;
-    color: black;
-}
-.headLines{
-    padding-bottom: 60px;
-    font-weight:400;
-    font-size: 50px
-}
-
 /********* HOME PAGE **********/
 .flexHome{
     display: flex;   
@@ -237,7 +163,7 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 .card{
     background-image: url(../Assets/images/gym.jpg);
     background-position: bottom;
-    padding: 10rem 0 0;
+    padding: 9.9rem 0 0;
     max-width: 35ch;
     border-radius: 1rem;
     overflow: hidden;
@@ -458,6 +384,79 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     border-radius: 1rem;
     width: 60%;
     padding: 10px;
+}
+/*******CONTACT PAGE LAYOUT*******/
+
+.wrapperContact{
+    display: flex; 
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 7rem 0;
+}
+.formContact{
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    border-radius: 25px;
+    width: 800px;
+    text-align: center;
+    padding-top: 60px;
+}
+.formContact div input{
+    border-radius: 20px;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+}
+textarea{
+    border-radius: 20px;
+    border: none;
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+}
+label{
+    display: block;
+    position: relative;
+    right: 300px;
+}
+
+
+/* Links and social media side */
+.phoneAndEmail a, h3{
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.phoneAndEmail{
+    padding-bottom: 30px;
+}
+
+/* Override block display from above selector */
+.imagesInContact a
+{
+    display: inline-block;
+    border: 1px solid #000; 
+    width: 16%; 
+    height: 30%;
+    border-radius: 20px; 
+    font-size: 40px; 
+    margin: 0 10px;
+    position: relative;
+    left: 45px;
+    text-align: center;
+}
+.contactInfo{
+    padding-top: 30px;
+    color: black;
+}
+.headLines{
+    padding-bottom: 60px;
+    font-weight:400;
+    font-size: 50px
 }
 
 /*footer css*/

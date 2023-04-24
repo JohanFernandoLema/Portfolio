@@ -122,7 +122,17 @@ align-items: center;
     .wrapperContact .register .formContact label{
         text-align: left;
         position: relative;
-        right: 7.5rem;
+        right: 7.2rem;
+        font-size: 1.2rem;
+    }
+    .wrapperContact .register .formContact #email{
+        right: 8.4rem;
+    }
+    .wrapperContact .register .formContact input{
+        font-size: .8rem;
+    }
+    .wrapperContact .register .formContact textarea{
+        font-size: .8rem;
     }
     .phoneAndEmail a, h3{
         position: relative;
@@ -137,6 +147,7 @@ align-items: center;
     label{
         display: inline;
     }
+
 
     /* Links and social media side */
 .phoneAndEmail a, h3{
