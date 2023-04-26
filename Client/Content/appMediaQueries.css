@@ -77,9 +77,9 @@
     font-weight: 400;
 }
  .wrapperProjects{     
-    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-align-items: center;
+    align-items: center;
 }
 .projectImages{
     width: 70%;
@@ -87,7 +87,6 @@ align-items: center;
 }
 .wrapperProjects .firstCard{
     padding: 1rem;
-    width: 92%;
     border-radius: var(--border-radious);
     background: hsla(286, 63%, 50%, 0.1);   
     backdrop-filter: blur(1rem);
@@ -95,7 +94,6 @@ align-items: center;
 }
 .wrapperProjects .secondCard{
     padding: 1rem;
-    width: 92%;
     border-radius: var(--border-radious);
     background: hsla(286, 63%, 50%, 0.1);   
     backdrop-filter: blur(1rem);
@@ -103,7 +101,14 @@ align-items: center;
 }
 .wrapperProjects .thirdCard{
     padding: 1rem;
-    width: 92%;
+    border-radius: var(--border-radious);
+    background: hsla(286, 63%, 50%, 0.1);   
+    backdrop-filter: blur(1rem);
+    margin-left: 0;
+    text-align: center;
+}
+.wrapperProjects .fourthCard{
+    padding: 1rem;
     border-radius: var(--border-radious);
     background: hsla(286, 63%, 50%, 0.1);   
     backdrop-filter: blur(1rem);
