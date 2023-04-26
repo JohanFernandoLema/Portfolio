@@ -139,10 +139,6 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     height: 110%;
 }
 
-.container .gymPicture img{
-    width: 50%;
-    height: 70%;
-}
 .aboutGrid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -152,7 +148,10 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     align-items: center;
     padding: 2rem;
 }
-
+.container .gymPicture img{
+    width: 50%;
+    height: 70%;
+}
 .wrappingCards{
     display: grid;
     min-height: 100vh;
@@ -160,9 +159,31 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     line-height: 1.6;
     background: var(--clr-neutral-900);
 }
+/* CARDS WITH MOVEMENT */
+.myBackground{
+    background-image: url(../Assets/images/cayambeBorn.jpg);
+    background-size: cover;
+    padding: 8rem 0 0;
+    max-width: 90%;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease-in;
+}
+.myBackground:hover{
+    transform: scale(1.05);
+}
+.backgContent{
+    --padding:1rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / .3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
 .card{
-    background-image: url(../Assets/images/gym.jpg);
-    background-position: bottom;
+    background-image: url(../Assets/images/gymPicture.jpeg);
+    background-size: cover;
     padding: 9.9rem 0 0;
     max-width: 35ch;
     border-radius: 1rem;
@@ -188,7 +209,7 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 /* We are using this property for mobiles since their primary device is touching the screen */
 @media (hover){
     .card-content{
-        transform: translateY(82%);
+        transform: translateY(85%);
         transition: transform 500ms ease-in;
     }
     .card:hover .card-content,
@@ -215,6 +236,7 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
 
 .card-title{
     position: relative;
+    right: 35px;
 }
 .card-title::after{
     content: "";
@@ -223,33 +245,20 @@ button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-siz
     bottom: -2.4px;
     height: 3px;
     background-color: var(--clr-accent-400);
-    width: calc(84% + var(--padding));
+    width: calc(85% + var(--padding));
     transform-origin: left;
     transition: transform 500ms ease;
 }
 .card:hover .card-title::after{
-    transform: scaleX(1);
+    transform: scaleX(0);
 }
 .card:hover .card-title::after,
 .card:focus-within .card-title::after{
     transform: scaleX(1);
 }
-.button{
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-accent-400);
-    padding: 0.5em 1.25em;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    border-radius: .25rem;
-}
 
-.button:hover,
-.button:focus{
-    background-color: var(--clr-neutral-100);
-}
+
+
 /* ====================== PROJECTS PAGE CSS ============================= */
 .wrapperProjects{
     display: flex;

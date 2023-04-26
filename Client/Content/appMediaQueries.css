@@ -67,7 +67,9 @@
         margin-left: 2.3rem;
     }
 /* =================== ABOUT PAGE ================== */
-
+.aboutGrid{
+    grid-template-columns: 1fr;
+}
  /* =================PROJECTS PAGE =============== */
 .container .headingProjects{
     text-align: center;
