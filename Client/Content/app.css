@@ -1,485 +1,514 @@
 /* ================== GLOBAL VARIABLES ================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-:root{
-    --border-radious:2rem;
-    --clr-neutral-900: hsl(207 19% 9%);
-    --clr-neutral-100: hsl(0 0% 100% );
-    --clr-accent-400: hsl(142 90% 61%);
+:root {
+  --border-radious: 1rem;
+  --clr-neutral-900: hsl(207 19% 9%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-accent-400: hsl(142 90% 61%);
 }
 
-h3{text-align: center;}
+h3 {
+  text-align: center;
+}
 *,
 *::before,
-*:after{
-    box-sizing: border-box;
+*:after {
+  box-sizing: border-box;
 }
 body {
-    /* background-image: url('../Assets/images/trilliumBack.jpg');
+  /* background-image: url('../Assets/images/trilliumBack.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
-    background-image: linear-gradient(135deg, black, white);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: poppins, 'sans-serif';
-    font-size: 20px;
-    color: lightblue;
+  background-image: linear-gradient(135deg, black, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: poppins, 'sans-serif';
+  font-size: 20px;
+  color: lightblue;
 }
 
 /*header css*/
 /* Icons padding */
-span{
-    padding-right: 10px;
+span {
+  padding-right: 10px;
 }
-
-.primary-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between
+.disappearBtn {
+  display: none;
 }
-.disappearBtn{
-    display: none;
-}
-.primary-navigation{    
-    display: flex;
-    list-style:none;
-    background: hsl(0 0% 0% / 0.75);
-    padding-bottom: 17px;   
+.primary-navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 17px;
 }
 /* Basically what Supports does is that when our website is used in a browser that supports this
    property it will use it, otherwise It will use the defaul value that is above*/
-@supports (backdrop-filter: blur(1rem)){
-    .primary-navigation{
-        background: hsl(0 0% 100% / 0.1);   
-        backdrop-filter: blur(1rem);
-    }
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+  }
 }
-
-.primary-navigation li a{    
-    padding-right: 30px;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 15px;
+.primary-navigation li a {
+  padding-right: 1rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-right: 2rem;
+}
+.primary-navigation li::before {
+  content: '';
+  width: 2rem;
+  height: 20px;
+  background: blue;
 }
 
 /********* HOME PAGE **********/
-.flexHome{
-    display: flex;   
-    margin-top: 1rem;
-    padding: 6rem;
+.flexHome {
+  display: grid;
+  grid-template-columns: 59% 39%;
+  align-items: center;
+  padding: 2%;
+  gap: 3rem;
+  margin-top: 7rem;
+}
+.intro h1 {
+  font-size: 45px;
+  font-weight: 400px;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.4s;
+}
+.intro h1:nth-of-type(2) {
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.4s;
+}
+.intro h2 {
+  font-size: 75px;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+.intro h1 b {
+  color: #03c988;
+}
+#statement {
+  font-size: 25px;
+  padding: 30px 0px;
+  animation: slideTop 1s ease forwards;
 }
 
-.intro h1{
-    font-size: 45px; 
-    font-weight: 400px; 
-    opacity: 0;
-    animation: slideBottom 1s ease forwards; 
-    animation-delay: .4s;
+.homeButton {
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 16px;
+  font-size: 20px;
+  animation: slideTop 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 0.7s;
+  margin-bottom: 8.5rem;
+  color: black;
+  background-color: #fff;
+  transition: 0.1s ease;
 }
-.intro h1:nth-of-type(2){
-    animation: slideTop 1s ease forwards; 
-    animation-delay: .4s;
-}
-.intro h2{
-    font-size: 75px; 
-    animation: slideRight 1s ease forwards; 
-    animation-delay: .7s; 
-    opacity: 0; 
-}
-.intro h1 b{
-    color: #03C988;
-}
-#statement{
-    font-size: 25px; 
-    padding: 30px 0px;
-    animation: slideTop 1s ease forwards;
+.aboutLink:hover {
+  color: white;
+  background: #000;
 }
 
-button{border: none; padding: 10px 20px 10px 20px; border-radius: 16px; font-size: 20px;}
-.aboutLink:hover{color: white; background:#000;}
-.aboutLink{color: black; background-color: #fff; transition: .1s ease;}
-
-#myPhoto{
-    margin-left: 30px; 
-    border-radius: 80px; 
-    box-shadow: 10px 10px 10px white; 
-    width: 600px; height: 400px;}
+.homePhoto {
+  width: 100%;
+}
+#myPhoto {
+  border-radius: 10%;
+  box-shadow: 10px 10px 10px white;
+  width: 100%;
+  position: relative;
+  bottom: 4rem;
+}
 
 /*******ABOUT PAGE LAYOUT*******/
-.mainInfo{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
-.container .mainInfo .skills{
-    background: #fff;
-    border-radius: var(--border-radious);
-    padding: 2rem;
-    width: 50%;
+.container .mainInfo .skills {
+  background: #fff;
+  padding: 1rem;
+  width: 50%;
 }
-.container .mainInfo .experience{
-    background: #fff;
-    border-radius: var(--border-radious);
-    padding: 2rem;
-    width: 50%;
-    margin: 0 20px;
+.container .mainInfo .experience {
+  background: #fff;
+  padding: 1rem;
+  width: 50%;
+  margin: 0 20px;
 }
-.container .mainInfo .info{
-    background: #fff;
-    border-radius: var(--border-radious);
-    padding: 2rem;
-    width: 50%;
+.container .mainInfo .info {
+  background: #fff;
+  padding: 1rem;
+  width: 50%;
 }
-.mainInfo h2{
-    text-align: center;
+.mainInfo h2 {
+  text-align: center;
 }
 
-.container .volcano img{
-    width: 100%;
-    height: 110%;
+.container .volcano img {
+  width: 100%;
+  height: 110%;
 }
 
-.aboutGrid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 7rem;
-    grid-auto-rows: minmax(100px, auto);
-    text-align: center;
-    align-items: center;
-    padding: 2rem;
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7rem;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
 }
-.container .gymPicture img{
-    width: 50%;
-    height: 70%;
+.container .gymPicture img {
+  width: 50%;
+  height: 70%;
 }
-.wrappingCards{
-    display: grid;
-    min-height: 100vh;
-    place-items: center;
-    line-height: 1.6;
-    background: var(--clr-neutral-900);
+.wrappingCards {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background: var(--clr-neutral-900);
 }
 /* CARDS WITH MOVEMENT */
-.myBackground{
-    background-image: url(../Assets/images/cayambeBorn.jpg);
-    background-size: cover;
-    padding: 8rem 0 0;
-    max-width: 90%;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 500ms ease-in;
+.myBackground {
+  background-image: url(../Assets/images/cayambeBorn.jpg);
+  background-size: cover;
+  padding: 8rem 0 0;
+  max-width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease-in;
 }
-.myBackground:hover{
-    transform: scale(1.05);
+.myBackground:hover {
+  transform: scale(1.05);
 }
-.backgContent{
-    --padding:1rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(20 0% 0% / .3) 20%,
-        hsl(0 0% 0% / 1)
-    );
+.backgContent {
+  --padding: 1rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
 }
-.card{
-    background-image: url(../Assets/images/gymPicture.jpeg);
-    background-size: cover;
-    padding: 9.9rem 0 0;
-    max-width: 35ch;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 500ms ease-in;
+.card {
+  background-image: url(../Assets/images/gymPicture.jpeg);
+  background-size: cover;
+  padding: 9.9rem 0 0;
+  max-width: 35ch;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 500ms ease-in;
 }
 .card:hover,
-.card:focus-within{
-    transform: scale(1.05);
+.card:focus-within {
+  transform: scale(1.05);
 }
 
-.card-content{
-    --padding:1rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(20 0% 0% / .3) 20%,
-        hsl(0 0% 0% / 1)
-    );
+.card-content {
+  --padding: 1rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
 }
 
 /* When we are using a primary pointing device (either touch screen or mouse) */
 /* We are using this property for mobiles since their primary device is touching the screen */
-@media (hover){
-    .card-content{
-        transform: translateY(85%);
-        transition: transform 500ms ease-in;
-    }
-    .card:hover .card-content,
-    .card:focus-within .card-content{
-        transform: translateY(0);
-        transition-delay: 500ms ;
-    }
-    .card:focus-within .card-content{
-        transition-duration: 0ms;
-    }
-    .card-content > *:not(.card-title) {
-        opacity: 0;
-        transition: opacity 500ms ease-in-out;
-    }
-    .card:hover .card-content > *:not(.card-title),
-    .card:focus-within .card-content > *:not(.card-title) {
-        opacity: 1;
-        transition-delay: 1000ms;
-    }
-    .card-title:after{
-        transform: scaleX(0);
-    }
+@media (hover) {
+  .card-content {
+    transform: translateY(85%);
+    transition: transform 500ms ease-in;
+  }
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+  .card-title:after {
+    transform: scaleX(0);
+  }
 }
 
-.card-title{
-    position: relative;
-    right: 35px;
+.card-title {
+  position: relative;
+  right: 35px;
 }
-.card-title::after{
-    content: "";
-    position: absolute;
-    left: calc(var(--padding) * -1);
-    bottom: -2.4px;
-    height: 3px;
-    background-color: var(--clr-accent-400);
-    width: calc(85% + var(--padding));
-    transform-origin: left;
-    transition: transform 500ms ease;
+.card-title::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--padding) * -1);
+  bottom: -2.4px;
+  height: 3px;
+  background-color: var(--clr-accent-400);
+  width: calc(85% + var(--padding));
+  transform-origin: left;
+  transition: transform 500ms ease;
 }
-.card:hover .card-title::after{
-    transform: scaleX(0);
+.card:hover .card-title::after {
+  transform: scaleX(0);
 }
 .card:hover .card-title::after,
-.card:focus-within .card-title::after{
-    transform: scaleX(1);
+.card:focus-within .card-title::after {
+  transform: scaleX(1);
 }
-
-
 
 /* ====================== PROJECTS PAGE CSS ============================= */
-.wrapperProjects{
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 2rem;
+.images {
+  width: 100%;
 }
-.projectImages{
-    width: 100%;
-    height: 80%;
+.wrapperProjects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
-.wrapperProjects div h5{
-    font-size: 1.3rem;
-    margin: 20px 0;
-    font-weight: 600;
+.projects {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.wrapperProjects .firstCard{
-    padding: 2rem;
-    border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    animation: slideBottom 1s ease;
+.cardContent {
+  padding: 2rem;
 }
-
-.wrapperProjects .secondCard{
-    padding: 2rem;
-    border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    animation: slideBottom 1s ease;
+.projects h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
-.wrapperProjects .thirdCard{
-    padding: 2rem;
-    border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    animation: slideBottom 1s ease;
-}
-.wrapperProjects .fourthCard{
-    padding: 2rem;
-    border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    animation: slideTop 3s ease forwards;
+.gitHubLinks {
+  background: hsla(198, 84%, 81%, 1);
+  border: none;
+  font-size: 3rem;
 }
 
 /* ====================== SERVICES PAGE CSS ============================= */
-.containerProjects h1{
-    text-align: center;
-    position: relative;
-    bottom: 1rem;
-    z-index: 999;
+.containerProjects h1 {
+  text-align: center;
+  position: relative;
+  bottom: 1rem;
+  z-index: 999;
 }
 /* ==== WEB DEVELOPMENT ==== */
-.webDevelopment{
-    gap: 2rem;
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    display: flex;
-    padding: 4rem;
-    border-radius: 30px;
-    flex-grow: 1;
+.webDevelopment {
+  gap: 1rem;
+  background: hsla(286, 63%, 50%, 0.1);
+  backdrop-filter: blur(1rem);
+  display: flex;
+  padding: 4rem;
+  border-radius: 30px;
+  flex-grow: 1;
 }
-.webDevelopment div span{
-    background: #000;
-    position: relative;
-    left: 40%;
-    bottom: 10%;    
-    font-size: 4rem;
-    padding: .3rem 1rem;
-    border-radius: 10%;
-    color: #fff;
+.webDevelopment div span {
+  background: #000;
+  position: relative;
+  left: 40%;
+  bottom: 10%;
+  font-size: 4rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10%;
+  color: #fff;
 }
-.webDevelopment .htmlService{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.webDevelopment .htmlService {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
-.webDevelopment h3{
-    text-align: center;
-    font-size: 2rem;
-    padding-bottom: 1rem;
-    font-weight: 400;
-    color: black;
+.webDevelopment h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  color: black;
 }
-.webDevelopment .css{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.webDevelopment .css {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
-.webDevelopment .javaScript{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.webDevelopment .javaScript {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
 
 /* ==== SOFTWARE DEVELOPMENT */
-.softwareDevelopment{
-    gap: 2rem;
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    display: flex;
-    padding: 4rem;
-    border-radius: 30px;
-    flex-grow: 1;
+.softwareDevelopment {
+  gap: 1rem;
+  background: hsla(286, 63%, 50%, 0.1);
+  backdrop-filter: blur(1rem);
+  display: flex;
+  padding: 4rem;
+  border-radius: 30px;
+  flex-grow: 1;
 }
-.softwareDevelopment h3{
-    text-align: center;
-    font-size: 2rem;
-    padding-bottom: 1rem;
-    font-weight: 400;
-    color: black;
+.softwareDevelopment h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  color: black;
 }
-.softwareDevelopment div span{
-    background: #000;
-    position: relative;
-    left: 40%;
-    bottom: 10%;    
-    font-size: 4rem;
-    padding: .3rem 1rem;
-    border-radius: 10%;
-    color: #fff;
+.softwareDevelopment div span {
+  background: #000;
+  position: relative;
+  left: 40%;
+  bottom: 10%;
+  font-size: 4rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10%;
+  color: #fff;
 }
-.softwareDevelopment .cSharp{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.softwareDevelopment .cSharp {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
-.softwareDevelopment .java{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.softwareDevelopment .java {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
-.softwareDevelopment .python{
-    background: #fff;
-    border-radius: 1rem;
-    width: 60%;
-    padding: 10px;
+.softwareDevelopment .python {
+  background: #fff;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 10px;
 }
 /*******CONTACT PAGE LAYOUT*******/
 
-.wrapperContact{
-    display: flex; 
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-around;
-    padding: 7rem 0;
+.wrapperContact {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 7rem 0;
 }
-.formContact{
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    border-radius: 25px;
-    width: 800px;
-    text-align: center;
-    padding-top: 60px;
+.formContact {
+  background: hsla(286, 63%, 50%, 0.1);
+  backdrop-filter: blur(1rem);
+  border-radius: 25px;
+  width: 800px;
+  text-align: center;
+  padding-top: 60px;
 }
-.formContact div input{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
+.formContact div input {
+  border-radius: 20px;
+  border: none;
+  width: 90%;
+  height: 50px;
+  padding-left: 10px;
 }
-textarea{
-    border-radius: 20px;
-    border: none;
-    width: 90%;
-    height: 50px;
-    padding-left: 10px;
+textarea {
+  border-radius: 20px;
+  border: none;
+  width: 90%;
+  height: 50px;
+  padding-left: 10px;
 }
-label{
-    display: block;
-    position: relative;
-    right: 300px;
+label {
+  display: block;
+  position: relative;
+  right: 300px;
 }
-
 
 /* Links and social media side */
-.phoneAndEmail a, h3{
-    display: block;
-    text-align: left;
-    font-size: 20px;
-    text-decoration: none;
-    color: #000;
+.phoneAndEmail a,
+h3 {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
 }
-.phoneAndEmail{
-    padding-bottom: 30px;
+.phoneAndEmail {
+  padding-bottom: 30px;
 }
 
 /* Override block display from above selector */
-.imagesInContact a
-{
-    display: inline-block;
-    border: 1px solid #000; 
-    width: 16%; 
-    height: 30%;
-    border-radius: 20px; 
-    font-size: 40px; 
-    margin: 0 10px;
-    position: relative;
-    left: 45px;
-    text-align: center;
+.imagesInContact a {
+  display: inline-block;
+  border: 1px solid #000;
+  width: 16%;
+  height: 30%;
+  border-radius: 20px;
+  font-size: 40px;
+  margin: 0 10px;
+  position: relative;
+  left: 45px;
+  text-align: center;
 }
-.contactInfo{
-    padding-top: 30px;
-    color: black;
+.contactInfo {
+  padding-top: 30px;
+  color: black;
 }
-.headLines{
-    padding-bottom: 60px;
-    font-weight:400;
-    font-size: 50px
+.headLines {
+  padding-bottom: 60px;
+  font-weight: 400;
+  font-size: 50px;
 }
 
 /*footer css*/
-footer{padding-top: 5%;}
+footer {
+  padding-top: 5%;
+}
 
 /* KeyFramesForWebsite */
-@keyframes slideBottom{ 0%{transform: translateY(-100px); opacity: 0; } 100%{transform: translateY(0); opacity: 1;}}
-@keyframes slideTop{ 0%{transform: translateY(100px); opacity: 0; } 100%{transform: translateY(0); opacity: 1;}}
-@keyframes slideRight{ 0%{transform: translateX(-100px); opacity: 0; } 100%{transform: translateX(0); opacity: 1;}}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
