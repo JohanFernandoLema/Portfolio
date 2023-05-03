@@ -1,221 +1,232 @@
- /* Responsiveness for website */
- @media only screen and (max-width: 35em) {
-    .primary-navigation{
-      position: fixed;
-      z-index: 1000;
-      inset: 0 0 0 35%;
-      flex-direction: column;
-      /* Top , left - We used minimun in order to resize the screen in smaller phones. */
-      padding: 3rem 2rem;
-      transform: translateX(100%);
-      transition: transform 350ms ease-out;
-      }
-      .primary-navigation[data-visible="true"]{
-          transform: translateX(30%);
-      }
-      .primary-navigation li a{
-      margin-top: 30px;
-      }
-      .mobile-nav-toggle{
-          display: block;
-          position: absolute;
-          background: transparent;
-          font-size: 1.5rem;
-          top:1rem;
-          right: 1rem;
-          z-index: 9999;
-          align-items: center;
-      }
-
-    /* =========== HOME PAGE ================= */
-    .container{
-        display: grid;
-        position: relative;
-        bottom: 7rem;
-        grid-template-columns: 1fr;
-        width: 90%;
-        padding: 1rem;
-    }
-    .intro h1{
-        font-size: 1rem; 
-        font-weight: 300px; 
-    }
-    .intro h2{
-        font-size: 2rem; 
-        opacity: 0; 
-    }
-    #statement{
-        font-size:1rem; 
-        animation: slideTop 1s ease forwards;
-        text-align: justify;
-    }
-    
-    button{
-        border: none; 
-        padding: 10px 20px 10px 20px; 
-        border-radius: 16px; 
-        font-size: .4rem; 
-        margin-bottom: 2rem;
-    }
-    .aboutLink:hover{
-        background: #000;
-        color: #ddd;
-    }
-    #myPhoto{
-        border-radius: 80px; 
-        box-shadow: 10px 10px 10px white; 
-        width: 80%; 
-        height: 90%; 
-        margin-left: 2.5rem;
-    }
-/* =================== ABOUT PAGE ================== */
-.aboutGrid{
+/* Responsiveness for website */
+@media only screen and (max-width: 35em) {
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 35%;
+    flex-direction: column;
+    /* Top , left - We used minimun in order to resize the screen in smaller phones. */
+    padding: 3rem 2rem;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(30%);
+  }
+  .primary-navigation li a {
+    margin-top: 30px;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    background: transparent;
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    align-items: center;
+  }
+  /* =========== HOME PAGE ================= */
+  .container {
+    display: grid;
+    position: relative;
+    bottom: 7rem;
     grid-template-columns: 1fr;
-}
- /* =================PROJECTS PAGE =============== */
-.container .headingProjects{
+    width: 90%;
+    padding: 1rem;
+    margin-top: 15.3rem;
+  }
+  .socialMedia a {
+    display: none;
+  }
+
+  .intro h1 {
+    font-size: 1rem;
+    font-weight: 300px;
+  }
+  .intro h2 {
+    font-size: 2rem;
+    opacity: 0;
+  }
+  #statement {
+    font-size: 1rem;
+    animation: slideTop 1s ease forwards;
+    text-align: justify;
+  }
+
+  button {
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 16px;
+    font-size: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  .aboutLink:hover {
+    background: #000;
+    color: #ddd;
+  }
+  #myPhoto {
+    border-radius: 80px;
+    box-shadow: 10px 10px 10px white;
+    width: 80%;
+    height: 90%;
+    margin-left: 2.5rem;
+  }
+  /* =================== ABOUT PAGE ================== */
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+  /* =================PROJECTS PAGE =============== */
+  .container .headingProjects {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
-}
- .wrapperProjects{     
+  }
+  .wrapperProjects {
     grid-template-columns: 1fr;
     gap: 1rem;
     align-items: center;
-}
-.projectImages{
+  }
+  .projectImages {
     width: 70%;
     height: 50%;
-}
-.wrapperProjects .firstCard{
+  }
+  .wrapperProjects .firstCard {
     padding: 1rem;
     border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
+    background: hsla(286, 63%, 50%, 0.1);
     backdrop-filter: blur(1rem);
     text-align: center;
-}
-.wrapperProjects .secondCard{
+  }
+  .wrapperProjects .secondCard {
     padding: 1rem;
     border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
+    background: hsla(286, 63%, 50%, 0.1);
     backdrop-filter: blur(1rem);
     text-align: center;
-}
-.wrapperProjects .thirdCard{
+  }
+  .wrapperProjects .thirdCard {
     padding: 1rem;
     border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
-    backdrop-filter: blur(1rem);
-    margin-left: 0;
-    text-align: center;
-}
-.wrapperProjects .fourthCard{
-    padding: 1rem;
-    border-radius: var(--border-radious);
-    background: hsla(286, 63%, 50%, 0.1);   
+    background: hsla(286, 63%, 50%, 0.1);
     backdrop-filter: blur(1rem);
     margin-left: 0;
     text-align: center;
-}
+  }
+  .wrapperProjects .fourthCard {
+    padding: 1rem;
+    border-radius: var(--border-radious);
+    background: hsla(286, 63%, 50%, 0.1);
+    backdrop-filter: blur(1rem);
+    margin-left: 0;
+    text-align: center;
+  }
 
+  /* ================ CONTACT PAGE ================ */
+  .wrapperContact {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .wrapperContact .register .formContact label {
+    text-align: left;
+    position: relative;
+    right: 7.2rem;
+    font-size: 1.2rem;
+  }
+  .wrapperContact .register .formContact #email {
+    right: 8.4rem;
+  }
+  .wrapperContact .register .formContact input {
+    font-size: 0.8rem;
+  }
+  .wrapperContact .register .formContact textarea {
+    font-size: 0.8rem;
+  }
+  .phoneAndEmail a,
+  h3 {
+    position: relative;
+    left: 3rem;
+  }
+  .formContact {
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+  }
+  label {
+    display: inline;
+  }
 
-    
-    /* ================ CONTACT PAGE ================ */
-    .wrapperContact{
-        display: grid; 
-        grid-template-columns: 1fr;
-        width: 80%;
-        margin: 0 auto;
-        padding: 0;
-    }
-    .wrapperContact .register .formContact label{
-        text-align: left;
-        position: relative;
-        right: 7.2rem;
-        font-size: 1.2rem;
-    }
-    .wrapperContact .register .formContact #email{
-        right: 8.4rem;
-    }
-    .wrapperContact .register .formContact input{
-        font-size: .8rem;
-    }
-    .wrapperContact .register .formContact textarea{
-        font-size: .8rem;
-    }
-    .phoneAndEmail a, h3{
-        position: relative;
-        left: 3rem;
-    }
-    .formContact{
-        border-radius: 25px;
-        width: 100%;
-        text-align: center;
-        padding-top: 60px;
-    }
-    label{
-        display: inline;
-    }
-
-
-    /* Links and social media side */
-.phoneAndEmail a, h3{
+  /* Links and social media side */
+  .phoneAndEmail a,
+  h3 {
     display: block;
     text-align: left;
     font-size: 20px;
     text-decoration: none;
     color: #000;
-}
-.phoneAndEmail{
+  }
+  .phoneAndEmail {
     padding-bottom: 30px;
-}
+  }
 
-/* Override block display from above selector */
-.imagesInContact a
-{
-    border: 1px solid black; 
-    width: 16%; 
+  /* Override block display from above selector */
+  .imagesInContact a {
+    border: 1px solid black;
+    width: 16%;
     height: 30%;
     position: relative;
-    left:21%;
-    border-radius: 20px; 
-    font-size: 40px; 
+    left: 21%;
+    border-radius: 20px;
+    font-size: 40px;
     margin: 0 10px 10px 0;
     text-align: center;
-}
-.contactInfo{
+  }
+  .contactInfo {
     padding-top: 30px;
     color: black;
-}
-.headLines{
+  }
+  .headLines {
     padding-bottom: 30px;
-    font-weight:300;
+    font-weight: 300;
     font-size: 3rem;
     text-align: center;
-}
-.contactInfo h2:nth-of-type(2){
-    padding-bottom: .5rem;
-}
-.flex{
-    display: flex;   
+  }
+  .contactInfo h2:nth-of-type(2) {
+    padding-bottom: 0.5rem;
+  }
+  .flex {
+    display: flex;
     align-items: center;
+  }
 }
+
+@media (min-width: 35em) and (max-width: 55em) {
+  .primary-navigation li a span {
+    display: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .intro h1 {
+    font-size: 1.4rem;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.4s;
   }
 
-  @media (min-width: 35em) and (max-width: 55em) {
-      .primary-navigation li a span{
-          display: none;
-      }
-      .container{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-      body{background: red;}
+  body {
+    background: red;
   }
-  @media (min-width: 700px) {
-      .primary-navigation li a span{
-          display: none;
-      }
-
+}
+@media (min-width: 700px) {
+  .primary-navigation li a span {
+    display: none;
   }
+}

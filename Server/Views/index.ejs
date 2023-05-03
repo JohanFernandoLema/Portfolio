@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Assets/images/logo-white.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./Assets/images/logo-white.png"
+      type="image/x-icon"
+    />
     <title><%= title%></title>
     <!--Css Section-->
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./Content/app.css">
-    <link rel="stylesheet" href="./Content/appMediaQueries.css">
-</head>
-<body>
-        <!--Main Navigation -->
-        <!--.bg-primary: This sets the color to the primary color.
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Content/app.css" />
+    <link rel="stylesheet" href="./Content/appMediaQueries.css" />
+  </head>
+  <body>
+    <!--Main Navigation -->
+    <!--.bg-primary: This sets the color to the primary color.
         .bg-secondary: This sets the color to the secondary color.
         .bg-success: This sets the color to the success color.
         .bg-danger: This sets the color to the danger color.
@@ -24,23 +31,18 @@
         .bg-dark: This sets the color to the dark color.
         .bg-white: This sets the color to the white color.
         .bg-transparent: This sets the navbar to be transparent.-->
-    <header>
-        <%- include('Components/header.ejs'); %>
-    </header>
+    <header><%- include('Components/header.ejs'); %></header>
 
     <main>
-        <!--Content-->
-        <%- include('Content/' + page + '.ejs'); %>
+      <!--Content-->
+      <%- include('Content/' + page + '.ejs'); %>
     </main>
-            <!--Site-wide footer-->
-    <footer>
-        <%- include('Components/footer.ejs'); %>
-    </footer>
-
-</body>
-    <!--JavaScript Section-->
-    <script src="./jquery/dist/jquery.min.js"></script>
-    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <script src="./Scripts/app.js"></script>
+    <!--Site-wide footer-->
+    <footer><%- include('Components/footer.ejs'); %></footer>
+  </body>
+  <!--JavaScript Section-->
+  <script src="./jquery/dist/jquery.min.js"></script>
+  <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="./Scripts/app.js"></script>
 </html>
