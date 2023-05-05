@@ -14,7 +14,12 @@
     transform: translateX(30%);
   }
   .primary-navigation li a {
-    margin-top: 30px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+  .primary-navigation li a:hover::before {
+    content: '';
+    transform: scaleX(0);
   }
   .mobile-nav-toggle {
     display: block;
@@ -127,17 +132,17 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 80%;
-    margin: 0 auto;
+    margin: 5rem auto;
     padding: 0;
   }
   .wrapperContact .register .formContact label {
     text-align: left;
     position: relative;
-    right: 7.2rem;
-    font-size: 1.2rem;
+    right: 7.5rem;
+    font-size: 1rem;
   }
   .wrapperContact .register .formContact #email {
-    right: 8.4rem;
+    right: 8.5rem;
   }
   .wrapperContact .register .formContact input {
     font-size: 0.8rem;
@@ -175,12 +180,9 @@
 
   /* Override block display from above selector */
   .imagesInContact a {
-    border: 1px solid black;
-    width: 16%;
-    height: 30%;
+    border: none;
     position: relative;
     left: 21%;
-    border-radius: 20px;
     font-size: 40px;
     margin: 0 10px 10px 0;
     text-align: center;
@@ -208,6 +210,12 @@
   .primary-navigation li a span {
     display: none;
   }
+  .primary-navigation li a {
+    font-size: 1.5rem;
+  }
+  .primary-navigation li a::before {
+    bottom: 0.2rem;
+  }
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -220,9 +228,45 @@
     animation: slideBottom 1s ease forwards;
     animation-delay: 0.4s;
   }
-
-  body {
-    background: red;
+  /* ========= HOME PAGE ================ */
+  .intro h1 {
+    font-size: 120%;
+    font-weight: 400;
+  }
+  .intro h2 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  #statement {
+    font-size: 15px;
+  }
+  .socialMedia a {
+    display: none;
+  }
+  /* ========= CONTACT PAGE ============== */
+  .formContact {
+    background: hsla(286, 63%, 50%, 0.1);
+    backdrop-filter: blur(1rem);
+    border-radius: 25px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+  }
+  label {
+    right: 0;
+  }
+  .contactBtn {
+    width: 30%;
+  }
+  .wrapperContact {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contactInfo h2:nth-child(1) {
+    position: absolute;
+    top: 7rem;
+    left: 27%;
+    font-size: 2.4rem;
   }
 }
 @media (min-width: 700px) {
