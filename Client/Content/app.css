@@ -58,7 +58,7 @@ span {
   content: ' ';
   width: 100%;
   height: 0.3rem;
-  background-color: #03c988;
+  background-color: #000;
   position: absolute;
   bottom: 0.4rem;
   transform: scaleX(0);
@@ -163,19 +163,14 @@ span {
   width: 100%;
   background: #000;
 }
-.row::after {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
 .slider-container {
-  content: '';
-  clear: both;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 .slide-img {
-  width: 100%;
-  height: 30vh;
+  width: 80%;
+  height: 40vh;
 }
 /* ====================== PROJECTS PAGE CSS ============================= */
 .images {
@@ -192,6 +187,7 @@ span {
   grid-template-columns: 1fr;
   opacity: 0;
   animation: slideBottom 1s ease-in forwards;
+  margin: 4.1rem 0;
 }
 .cardContent {
   padding: 2rem;
